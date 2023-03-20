@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Test1</title>
+</head> 
+<body>
+	<canvas style="border:1px solid #000000" width="1000" height="200" id="lienzo" ></canvas>
+	<script type="text/javascript">
+		var cnv, ctx, pos_x = 0, img;
+		function anim(){
+			ctx.drawImage(img,pos_x,0);
+			pos_x += 1;
+			setTimeout(anim,50);
+		}
+		window.onload = function(){
+			img = new drawImage();
+			img.src = 'img/gato.png';
+			cnv = document.getElemenById('lienzo');
+			ctx = cnv.getContext('2d');
+			//iniciar la animacion
+			anim();
+		}
+	</script>
+</body>
+</html>
