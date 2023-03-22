@@ -1,28 +1,42 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<html>
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Cefeti46</title>
-</head> 
+  <title>Mi primera página con estilo</title>
+  <style type="text/css">
+  body {
+    padding-left: 11em;
+    font-family: Georgia, "Times New Roman",
+          Times, serif;
+    color: purple;
+    background-color: #d8da3d }
+  ul.navbar {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    top: 2em;
+    left: 1em;
+    width: 9em }
+  h1 {
+    font-family: Helvetica, Geneva, Arial,
+          SunSans-Regular, sans-serif }
+  ul.navbar li {
+    background: white;
+    margin: 0.5em 0;
+    padding: 0.3em;
+    border-right: 1em solid black }
+  ul.navbar a {
+    text-decoration: none }
+  a:link {
+    color: blue }
+  a:visited {
+    color: purple }
+  address {
+    margin-top: 1em;
+    padding-top: 1em;
+    border-top: thin dotted }
+  </style>
+</head>
+
 <body>
-	<canvas style="border:1px solid #000000" width="1000" height="200" id="lienzo" ></canvas>
-	<script type="text/javascript">
-		var cnv, ctx, pos_x = 0, img;
-		function anim(){
-			ctx.drawImage(img,pos_x,0);
-			pos_x += 1;
-			setTimeout(anim,50);
-		}
-		window.onload = function(){
-			img = new drawImage();
-			img.src = 'img/gato.png';
-			cnv = document.getElemenById('lienzo');
-			ctx = cnv.getContext('2d');
-			//iniciar la animacion
-			anim();
-		}
-	</script>
-</body>
-</html>
+[etc.]
